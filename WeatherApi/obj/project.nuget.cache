@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "9+LharXy+mLI1PLq23Of7Imhcvi0fE5dk8LroKPV5v9YOrkU+9KQLAst461r+7tiNA1SYc+PerbTdcWhVH5ZRA==",
+  "success": true,
+  "projectFilePath": "/home/andy/development/personal/dotnet-docker-dev-env/WeatherApi/WeatherApi.csproj",
+  "expectedPackageFiles": [
+    "/home/andy/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/andy/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/andy/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/home/andy/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/home/andy/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/home/andy/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
