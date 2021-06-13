@@ -9,6 +9,7 @@ services:
             - ".:/workspace"
         ports:
             - 5000:5000
+            - 5001:5001
         # command: >
         #     bash
         stdin_open: true # docker run -i
