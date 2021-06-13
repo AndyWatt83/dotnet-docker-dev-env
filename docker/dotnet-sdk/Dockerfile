@@ -7,3 +7,9 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y apt-transport-https
 RUN sudo apt-get update
 RUN sudo apt-get install -y dotnet-sdk-5.0
+RUN sudo apt-get install -y dotnet-sdk-3.1
+RUN dotnet tool install --global dotnet-ef
+RUN dotnet tool install --global FluentMigrator.DotNet.Cli
+RUN dotnet tool install --global dotnet-outdated-tool
+RUN dotnet tool install --global DotNetSdkHelpers
+ENV PATH="${PATH}:/root/.dotnet/tools"
