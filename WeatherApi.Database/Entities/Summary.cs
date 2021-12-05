@@ -1,9 +1,8 @@
 
-namespace WeatherApi.Database.Entities
+namespace WeatherApi.Database.Entities;
+
+public class Summary
 {
-  public class Summary
-  {
-    public int Id { get; set; }
-    public string Description { get; set; }  = default!;
-  }
+  public int Id { get; set; }
+  public string Description { get; set; } = default!;
 }

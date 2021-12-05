@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using WeatherApi.Database;
 
 var builder = WebApplication.CreateBuilder(args);

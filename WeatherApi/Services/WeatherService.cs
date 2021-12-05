@@ -1,9 +1,6 @@
-using System.Linq;
 using WeatherApi.Database;
-using WeatherApi.Database.Entities;
 
 namespace WeatherApi.Services;
-
 public class WeatherService : IWeatherService
 {
   private readonly AppDbContext _appDbContext;
