@@ -4,7 +4,7 @@ services:
     container_name: postgres
     image: "postgres" # use latest official postgres version
     env_file:
-      - database.env # configure postgres
+      - database/database.env # configure postgres
     volumes:
       - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
   dotnet-dev-env:
@@ -19,6 +19,4 @@ services:
     tty: true # docker run -t
 
 volumes:
-  database-data: null
-    # named volumes can be managed easier using docker-compose
-
+  database-data: null # named volumes can be managed easier using docker-compose

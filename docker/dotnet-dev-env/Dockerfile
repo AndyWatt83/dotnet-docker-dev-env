@@ -15,6 +15,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 RUN dotnet tool install -g dotnet-ef
 ENV PATH $PATH:/root/.dotnet/tools
 RUN dotnet ef --version
+RUN dotnet dev-certs https
 
 
 # [Optional] Uncomment this line to install global node packages.
