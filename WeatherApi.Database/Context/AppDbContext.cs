@@ -7,15 +7,6 @@ namespace WeatherApi.Database
   {
     public DbSet<Summary> Summaries { get; set; }
 
-    public string DbPath { get; private set; }
-
-    public AppDbContext()
-    {
-      var folder = Environment.SpecialFolder.LocalApplicationData;
-      var path = Environment.GetFolderPath(folder);
-      DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}blogging.db";
-    }
-
     protected override void OnConfiguring(DbContextOptionsBuilder options)
       => options.UseNpgsql("Host=postgres;Database=weather_database;Username=docker_user;Password=password");
 
