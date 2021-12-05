@@ -1,9 +1,10 @@
+using System.Linq;
 using WeatherApi.Database;
 using WeatherApi.Database.Entities;
 
 namespace WeatherApi.Services;
 
-public class WeatherService
+public class WeatherService : IWeatherService
 {
   private readonly AppDbContext _appDbContext;
 
@@ -12,8 +13,8 @@ public class WeatherService
     _appDbContext = appDbContext;
   }
 
-  public IEnumerable<Summary> GetSummaries()
+  public IEnumerable<string> GetSummaries()
   {
-        return null;
+        return _appDbContext.Summaries.Select(summary => summary.Description);
   }
 }

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WeatherApi.Services;
 
 namespace WeatherApi.Controllers;
 
@@ -6,12 +7,8 @@ namespace WeatherApi.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
     private readonly ILogger<WeatherForecastController> _logger;
+    private readonly IWeatherService _service;
 
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
@@ -21,11 +18,14 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+
+        var summaries = _service.GetSummaries().ToArray();
+
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
             TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            Summary = summaries[Random.Shared.Next(summaries.Length)]
         })
         .ToArray();
     }
