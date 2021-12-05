@@ -7,11 +7,6 @@ namespace WeatherApi.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-  private static readonly string[] Summaries = new[]
-  {
-        "111", "222", "333", "444", "555", "666", "777", "888", "999", "000"
-    };
-
   private readonly ILogger<WeatherForecastController> _logger;
   private readonly IWeatherService _service;
 
@@ -29,7 +24,7 @@ public class WeatherForecastController : ControllerBase
     {
       Date = DateTime.Now.AddDays(index),
       TemperatureC = Random.Shared.Next(-20, 55),
-      Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+      Summary = summaries[Random.Shared.Next(summaries.Length)]
     })
     .ToArray();
   }
