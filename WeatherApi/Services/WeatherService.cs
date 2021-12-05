@@ -12,8 +12,8 @@ public class WeatherService
     _appDbContext = appDbContext;
   }
 
-  public IEnumerable<Summary> Get Summaries()
+  public IEnumerable<Summary> GetSummaries()
   {
-
+        return null;
   }
 }
