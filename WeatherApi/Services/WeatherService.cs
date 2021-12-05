@@ -12,6 +12,6 @@ public class WeatherService : IWeatherService
 
   public IEnumerable<string> GetSummaries()
   {
-        return _appDbContext.Summaries.Select(summary => summary.Description);
+    return _appDbContext.Summaries.Select(summary => summary.Description);
   }
 }
