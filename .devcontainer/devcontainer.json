@@ -27,7 +27,8 @@
 		"2gua.rainbow-brackets",
 		"oderwat.indent-rainbow",
 		"donjayamanne.githistory",
-		"mikestead.dotenv"
+		"mikestead.dotenv",
+		"jchannon.csharpextensions"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
